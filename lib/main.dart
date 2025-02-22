@@ -14,19 +14,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'lab6',
       home: Scaffold(
-        appBar: AppBar(title: Text('lab6 UI')),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              CachedNetworkImage(
-                imageUrl:
-                    "https://cdn.prod.website-files.com/61845f7929f5aa517ebab941/6440f9477c2a321f0dd6ab61_How%20Artificial%20Intelligence%20(AI)%20Is%20Used%20In%20Biometrics.jpg",
-                placeholder: (context, url) => CircularProgressIndicator(),
-                errorWidget: (context, url, error) => Icon(Icons.error),
+        drawer: Drawer(
+          backgroundColor: const Color.fromARGB(255, 129, 184, 229),
+          child: ListView(
+            children: [
+              DrawerHeader(
+                margin: EdgeInsets.fromLTRB(5, 10, 5, 10),
+
+                child: Row(
+                  children: [Icon(Icons.people_alt_rounded), Text("Contacts")],
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.mobile_screen_share),
+                title: Text("device"),
+                trailing: Text("1"),
+                onTap: () {},
               ),
             ],
           ),
         ),
+        appBar: AppBar(title: Text('lab6 UI')),
+        backgroundColor: const Color.fromARGB(255, 253, 226, 130),
+        body: Center(child: Text("Navigation", style: TextStyle(fontSize: 60))),
       ),
     );
   }
