@@ -1,5 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
+//import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:lab4/body.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,43 +11,46 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'lab6',
+      title: 'Lab06 Advanced UI',
       home: Scaffold(
         drawer: Drawer(
-          backgroundColor: const Color.fromARGB(255, 129, 184, 229),
+          backgroundColor: const Color.fromARGB(255, 242, 245, 247),
           child: ListView(
             children: [
-              DrawerHeader(
-                margin: EdgeInsets.fromLTRB(5, 10, 5, 10),
-
-                child: Row(
-                  children: [Icon(Icons.people_alt_rounded), Text("Contacts")],
+              Container(
+                height: 80,
+                child: DrawerHeader(
+                  child: Row(
+                    children: [
+                      Icon(Icons.people_alt_rounded),
+                      Text("Contacts"),
+                    ],
+                  ),
                 ),
               ),
               ListTile(
                 leading: Icon(Icons.mobile_screen_share),
-                title: Text("device"),
-                trailing: Text("1"),
+                title: Text("Device"),
+                trailing: Text("Anything"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.mobile_screen_share),
+                title: Text("Contacts"),
+                trailing: Text("Anything"),
                 onTap: () {},
               ),
             ],
           ),
         ),
-        appBar: AppBar(title: Text('lab6 UI')),
-        backgroundColor: const Color.fromARGB(255, 253, 226, 130),
-        body: Center(),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: "setting",
-            ),
-          ],
+        appBar: AppBar(
+          title: const Text('Lab06 Advanced UI'),
+          backgroundColor: Colors.amber,
         ),
+        body: MyWidget(),
       ),
     );
   }
