@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               Expanded(
                 child: Image(
                   image: NetworkImage(
-                    'https://www.google.com/url?sa=i&url=https%3A%2F%2Fincubator.ucf.edu%2Fwhat-is-artificial-intelligence-ai-and-why-people-should-learn-about-it%2F&psig=AOvVaw0U6d9rdH-HqS-exMeyjWdI&ust=1740283821632000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjV2sm01osDFQAAAAAdAAAAABAR',
+                    'https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg',
                   ),
                 ),
               ),
