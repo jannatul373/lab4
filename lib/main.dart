@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,16 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'lab6',
       home: Scaffold(
-        appBar: AppBar(title: Text('lab4 uI')),
+        appBar: AppBar(title: Text('lab6 UI')),
         body: Center(
           child: Column(
-            children: [
-              Expanded(
-                child: Image(
-                  image: NetworkImage(
-                    'https://thefusioneer.com/wp-content/uploads/2023/11/5-AI-Advancements-to-Expect-in-the-Next-10-Years-scaled.jpeg',
-                  ),
-                ),
+            children: <Widget>[
+              CachedNetworkImage(
+                imageUrl:
+                    "https://cdn.prod.website-files.com/61845f7929f5aa517ebab941/6440f9477c2a321f0dd6ab61_How%20Artificial%20Intelligence%20(AI)%20Is%20Used%20In%20Biometrics.jpg",
+                placeholder: (context, url) => CircularProgressIndicator(),
+                errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ],
           ),
