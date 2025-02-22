@@ -36,7 +36,17 @@ class MyApp extends StatelessWidget {
         ),
         appBar: AppBar(title: Text('lab6 UI')),
         backgroundColor: const Color.fromARGB(255, 253, 226, 130),
-        body: Center(child: Text("Navigation", style: TextStyle(fontSize: 60))),
+        body: Center(),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "setting",
+            ),
+          ],
+        ),
       ),
     );
   }
